@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        jungung/android-quickstart: true
         jungung/jx3-k3s-vault: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        jungung/android-quickstart: merge
         jungung/jx3-k3s-vault: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - jungung/jx3-k3s-vault
+        - jungung/android-quickstart
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - jungung/jx3-k3s-vault
+        - jungung/android-quickstart
       target_url: http://lighthouse.jx.172.20.10.6.nip.io/merge/status
 kind: ConfigMap
 metadata:
