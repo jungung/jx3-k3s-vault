@@ -10,6 +10,10 @@ data:
       repos:
       - jungung/android-quickstart
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - jungung/hello_world
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -25,6 +29,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      jungung/hello_world:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       jungung/jx3-k3s-vault:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -36,6 +45,20 @@ data:
     owners: {}
     plugins:
       jungung/android-quickstart:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      jungung/hello_world:
       - approve
       - assign
       - help
@@ -78,6 +101,9 @@ data:
       trusted_org: jungung
     - repos:
       - jungung/android-quickstart
+      trusted_org: jungung
+    - repos:
+      - jungung/hello_world
       trusted_org: jungung
     welcome:
     - message_template: Welcome
