@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: jungung
+    provider: github
+    repository: hello-world
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: jungung-hello-world
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/jungung/hello_world.git
+  org: jungung
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: hello_world
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/jungung/hello_world

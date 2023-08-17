@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: android-quickstart
+    - name: hello_world
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
