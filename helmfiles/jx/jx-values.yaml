@@ -26,7 +26,7 @@ jxRequirements:
     clusterName: kind
     devEnvApprovers:
     - todo
-    environmentGitOwner: todo
+    environmentGitOwner: jungung
     gitKind: github
     gitName: github
     gitServer: https://github.com
