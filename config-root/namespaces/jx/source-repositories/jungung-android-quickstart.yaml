@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: jungung
+    provider: github
+    repository: android-quickstart
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: jungung-android-quickstart
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/jungung/android-quickstart.git
+  org: jungung
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: android-quickstart
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/jungung/android-quickstart
